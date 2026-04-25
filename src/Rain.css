@@ -1,0 +1,21 @@
+
+.page {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #0b1220; /* fallback behind canvas */
+}
+
+.canvas {
+    position: fixed;
+    inset: 0px;
+    z-index: 0-x;
+    pointer-events: none;
+    display: block;
+}
+
+.listItem {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 6px;
+}

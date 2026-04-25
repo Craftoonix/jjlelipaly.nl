@@ -1,8 +1,8 @@
-import Message from "./Message"
-
+import Board from "./Board"
+import Rain from "./Rain"
 
 function App() {
-  return <div><Message /></div>
+  return <div><Board /><Rain /></div>
 }
 
 export default App
