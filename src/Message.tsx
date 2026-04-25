@@ -1,0 +1,96 @@
+
+const styles = {
+  container: {
+    fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial",
+    display: "flex",
+    justifyContent: "center",
+    padding: "40px",
+    background: "#000000",
+    minHeight: "100vh",
+  },
+  card: {
+    width: "100%",
+    maxWidth: 760,
+    background: "rgba(0, 0, 0, 0)",
+    borderRadius: 12,
+    padding: 28,
+    border: "2px solid #00ff00",
+    boxShadow: "0 6px 18px rgb(0, 255, 0)",
+  },
+  avatar: {
+    width: 150,
+    height: 150,
+    borderRadius: "50%",
+    objectFit: "cover",
+    display: "block",
+    marginBottom: 16,
+  },
+  name: {
+    margin: 0,
+    fontSize: 28,
+  },
+  tagline: {
+    marginTop: 6,
+    color: "rgb(0, 255, 0)",
+    marginBottom: 18,
+  },
+  sectionTitle: {
+    marginTop: 18,
+    marginBottom: 8,
+    fontSize: 16,
+  },
+  text: {
+    color: "#00ff00",
+    lineHeight: 1.6,
+  },
+  list: {
+    paddingLeft: 0,
+    color: "#00ff00",
+    listStyleType: "none"
+  },
+};
+
+function Message(){
+    // const name = 'JOwOsh';
+    // if (name)
+    //     return <h1> Hello {name} </h1>;
+    // return <h1> Hello  world </h1>;
+      return (
+    <main style={styles.container}>
+      <section style={styles.card}>
+        <img
+          src="https://cdn.discordapp.com/avatars/230000463225946112/16da53128431c314472bb5bdb73526bb.webp?size=28"
+          alt="Profile"
+        />
+        <h1 style={styles.name}>Joshua J. Lelipaly</h1>
+        <p style={styles.tagline}>Backend Developer - Software Engineer</p>
+
+        <h2 style={styles.sectionTitle}>About</h2>
+        <p style={styles.text}>
+          I'm in my third year of persuing my Computer Science Bachelor's degree at <a href="https://www.universiteitleiden.nl">Leiden University</a> and I'm ready to enter the job market. My specialty lies within backend development, optimizations, 
+          data-driven services, and designing and maintaining server-side systems. I enjoy solving problems,
+          learning new technologies, and collaborating on meaningful projects.
+        </p>
+
+        <h2 style={styles.sectionTitle}>Skills</h2>
+        <ul style={styles.list}>
+          <li>C++</li>
+          <li>Python</li>
+          <li>C</li>
+          <li>Testing, CI/CD, Docker</li>
+          <li>JavaScript / TypeScript</li>
+          <li>React</li>
+        </ul>
+
+        <h2 style={styles.sectionTitle}>Contact</h2>
+        <p style={styles.text}>
+          Email: <a href="mailto:j.j.lelipaly@gmail.com">j.j.lelipaly@gmail.com</a>
+        </p>
+      </section>
+    </main>
+  );
+
+    
+}
+
+export default Message;
