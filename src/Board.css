@@ -1,55 +1,73 @@
-  .container {
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    display: flex;
-    justify-content: center;
-    padding: 40px;
-    min-height: 100vh;
-  }
+    .container {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+        min-height: 100vh;
+    }
 
-  .card {
-    width: 100%;
-    max-width: 760px;
-    background: rgba(0, 0, 0, 0);
-    border-radius: 12px;
-    padding: 28px;
-    border: 2px solid #00ff00;
-    box-shadow: 0 6px 18px rgb(0, 255, 0);
-    background-color: black;
-  }
+    .board {
+        max-width: 760px;
+        display: grid;
+        grid-template-areas:
+            "content menu";
+        grid-template-columns: 3fr 1fr;
+        gap: 20px
+    }
 
-  .avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin-bottom: 16px;
-  }
+    .content {
+        background: rgba(0, 0, 0, 0);
+        border-radius: 12px;
+        padding: 28px;
+        border: 2px solid #00ff00;
+        box-shadow: 0 6px 10px rgb(0, 255, 0);
+        background-color: black;
+        grid-area: content;
+    }
 
-  .name {
-    margin: 10px;
-    font-size: 28px;
-  }
+    .menu {
+        background: rgba(0, 0, 0, 0);
+        border-radius: 12px;
+        padding: 28px;
+        border: 2px solid #00ff00;
+        box-shadow: 0 6px 10px rgb(0, 255, 0);
+        background-color: black;
+        grid-area: menu;
+    }
 
-  .tagline {
-    margin-top: 6;
-    color: rgb(0, 255, 0);
-    margin-bottom: 18;
-  }
+    .avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin-bottom: 16px;
+    }
 
-  .sectionTitle {
-    margin-top: 18;
-    margin-bottom: 8;
-    font-size: 16;
-  }
+    .name {
+        margin: 10px;
+        font-size: 28px;
+    }
 
-  .text {
-    color: #00ff00;
-    line-height: 1.6;
-  }
+    .tagline {
+        margin-top: 6;
+        color: rgb(0, 255, 0);
+        margin-bottom: 18;
+    }
 
-  .list {
-    padding-left: 0;
-    color: #00ff00;
-    list-style-type: none;
-  }
+    .sectionTitle {
+        margin-top: 18;
+        margin-bottom: 8;
+        font-size: 16;
+    }
+
+    .text {
+        color: #00ff00;
+        line-height: 1.6;
+    }
+
+    .list {
+        padding-left: 0;
+        color: #00ff00;
+        list-style-type: none;
+    }

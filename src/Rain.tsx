@@ -17,7 +17,7 @@ function Rain() {
         ctx.scale(DPR, DPR);
 
         // get card element
-        const cardEl = document.querySelector(".card");
+        const cardEl = document.querySelector(".board");
         function getCardRect() {
             const r = cardEl.getBoundingClientRect();
             return { left: r.left, top: r.top, right: r.right, bottom: r.bottom };
