@@ -16,6 +16,14 @@ function Rain() {
         canvas.style.height = height + "px";
         ctx.scale(DPR, DPR);
 
+        // get card element
+        const cardEl = document.querySelector(".card");
+        function getCardRect() {
+            const r = cardEl.getBoundingClientRect();
+            return { left: r.left, top: r.top, right: r.right, bottom: r.bottom };
+        }
+        let cardRect = getCardRect();
+
         // Raindrop settings
         const dropCount = Math.floor((width * height) / 16000); // density based on area
         const drops = [];
@@ -50,6 +58,14 @@ function Rain() {
         }
         window.addEventListener("resize", resize);
 
+        function isInCard(x, y) {
+            return x >= cardRect.left && x <= cardRect.right && y >= cardRect.top && y <= cardRect.bottom;
+        }
+
+        function updateCardRect() { cardRect = getCardRect(); }
+        window.addEventListener("scroll", updateCardRect, { passive: true });
+        window.addEventListener("resize", updateCardRect);
+
         function draw(now) {
             if (!running) return;
             const dt = now - last;
@@ -75,6 +91,28 @@ function Rain() {
                     d.speed = rand(900, 2700) / 1000;
                     d.wind = rand(0, 0);
                     d.alpha = rand(0.2, 0.6);
+                }
+
+                // respawn when off bottom
+                if (d.y > height + d.len) {
+                    d.y = -20;
+                    d.x = Math.random() * width;
+                    d.len = rand(40, 75);
+                    d.speed = rand(900, 2700) / 1000;
+                    d.wind = rand(-0.3, 0.6);
+                    d.alpha = rand(0.2, 0.6);
+                }
+
+                // If the drop's tip is inside the card rect, skip drawing it (disappear on collision)
+                const tipX = d.x + d.wind * 8;
+                const tipY = d.y + d.len;
+                if (isInCard(tipX, tipY)) {
+                    // Optionally create a tiny splash just outside the card edge:
+                    // if the tip is just inside top/bottom/left/right edges, draw a small line at the border instead.
+                    // For simplicity, just respawn the drop above the screen so it disappears immediately:
+                    d.y = -Math.random() * 200;
+                    d.x = Math.random() * width;
+                    continue;
                 }
 
                 ctx.strokeStyle = `rgba(200,220,255,${d.alpha})`;
