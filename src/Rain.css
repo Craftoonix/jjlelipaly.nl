@@ -2,13 +2,11 @@
 .page {
     position: relative;
     overflow: hidden;
-    background: #0b1220; /* fallback behind canvas */
 }
 
 .canvas {
     position: fixed;
     inset: 0px;
-    z-index: 0-x;
     pointer-events: none;
     display: block;
 }
