@@ -5,8 +5,10 @@ import "./Rain.css"
 function Rain() {
     const canvasRef = useRef(null);
     useEffect(() => {
-        const canvas = canvasRef.current;
-        const ctx = canvas.getContext("2d");
+        const canvas = canvasRef.current as HTMLCanvasElement | null;
+        if (!canvas) return; //handle missing canvas
+        const ctx = canvas.getContext("2d") as CanvasRenderingContext2D | null;
+        if (!ctx) return;
         let width = (canvas.width = window.innerWidth);
         let height = (canvas.height = window.innerHeight);
         const DPR = window.devicePixelRatio || 1;
@@ -17,8 +19,9 @@ function Rain() {
         ctx.scale(DPR, DPR);
 
         // get card element
-        const cardEl = document.querySelector(".board");
+        const cardEl = document.querySelector(".board") as HTMLElement | null;
         function getCardRect() {
+            if (!cardEl) return null;
             const r = cardEl.getBoundingClientRect();
             return { left: r.left, top: r.top, right: r.right, bottom: r.bottom };
         }
@@ -26,10 +29,18 @@ function Rain() {
 
         // Raindrop settings
         const dropCount = Math.floor((width * height) / 16000); // density based on area
-        const drops = [];
-        
+    
+        type Drop = {
+            x: number;
+            y: number;
+            len: number;
+            speed: number;
+            wind: number;
+            alpha: number;
+        };
+        const drops: Drop[] = [];
 
-        function rand(min, max) {
+        function rand(min:number, max:number) {
             return Math.random() * (max - min) + min;
         }
 
@@ -50,15 +61,18 @@ function Rain() {
         function resize() {
             width = window.innerWidth;
             height = window.innerHeight;
+            if (!canvas) return; //handle missing canvas
             canvas.width = width * DPR;
             canvas.height = height * DPR;
             canvas.style.width = width + "px";
             canvas.style.height = height + "px";
+            if (!ctx) return;
             ctx.scale(DPR, DPR);
         }
         window.addEventListener("resize", resize);
 
-        function isInCard(x, y) {
+        function isInCard(x:number, y:number) {
+            if (!cardRect) return;
             return x >= cardRect.left && x <= cardRect.right && y >= cardRect.top && y <= cardRect.bottom;
         }
 
@@ -66,12 +80,13 @@ function Rain() {
         window.addEventListener("scroll", updateCardRect, { passive: true });
         window.addEventListener("resize", updateCardRect);
 
-        function draw(now) {
+        function draw(now:number) {
             if (!running) return;
             const dt = now - last;
             last = now;
 
             // Clear with slight opacity for motion blur effect
+            if (!ctx) return;
             ctx.clearRect(0, 0, width, height);
             ctx.fillStyle = "rgba(10,12,15,0.12)"; // subtle dark overlay; tweak as needed
             ctx.fillRect(0, 0, width, height);
