@@ -40,8 +40,18 @@ function Message(){
             Email: <a href="mailto:j.j.lelipaly@gmail.com">j.j.lelipaly@gmail.com</a>
           </p>
         </div>
-        <div className={"menu"}>
-
+        <div className={"socials"}>
+          <h2>Socials</h2>
+          <ul className={"list"}>
+            <li><a href="https://github.com/Craftoonix" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="https://x.com/Craftoonix" target="_blank" rel="noreferrer">Twitter</a></li>
+          </ul>
+        </div>
+        <div className={"friends"}>
+          <h2>Friends</h2>
+          <ul className={"list"}>
+            <li><a href="https://marchoek.nl" target="_blank" rel="noreferrer">Marc Hoek</a></li>
+          </ul>
         </div>
       </div>
     </main>
