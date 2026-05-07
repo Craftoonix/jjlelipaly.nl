@@ -35,20 +35,23 @@ function Home() {
                 Stars
             </h2>
             <nav>
+                <ul className={"list"}>
                 {/* <Link to="/aboutme">About Me</Link>  */}
-                <Link to="/resume">Resume</Link>  
+                <li className={"li"}><Link to="/resume">Resume</Link></li>                     
+                </ul>
+ 
             </nav> 
         </div>
         <div className={"friends"}>
             <h2>Friends</h2>
             <ul className={"list"}>
-                <li><a href="https://marchoek.nl" target="_blank" rel="noreferrer">Marc Hoek</a></li>
+                <li className={"li"}><a href="https://marchoek.nl" target="_blank" rel="noreferrer">Marc Hoek</a></li>
             </ul>            
             <h2>Socials</h2>
             <ul className={"list"}>
-                <li><a href="https://github.com/Craftoonix" target="_blank" rel="noreferrer">GitHub</a></li>
-                <li><a href="https://x.com/Craftoonix" target="_blank" rel="noreferrer">Twitter</a></li>
-                <li><a href="https://www.linkedin.com/in/joshua-jordan-lelipaly-928ba4302" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                <li className={"li"}><a href="https://github.com/Craftoonix" target="_blank" rel="noreferrer">GitHub</a></li>
+                <li className={"li"}><a href="https://x.com/Craftoonix" target="_blank" rel="noreferrer">Twitter</a></li>
+                <li className={"li"}><a href="https://www.linkedin.com/in/joshua-jordan-lelipaly-928ba4302" target="_blank" rel="noreferrer">LinkedIn</a></li>
 
             </ul>
         </div>
