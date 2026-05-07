@@ -5,79 +5,14 @@
         padding: 40px;
         min-height: 100vh;
     }
-
     .board {
         max-width: 760px;
         display: grid;
         grid-template-areas:
-            "content socials"
+            "content stars"
             "content friends";
         grid-template-columns: 3fr 1fr;
         gap: 20px
     }
 
-    .content {
-        background: rgba(0, 0, 0, 0);
-        border-radius: 12px;
-        padding: 28px;
-        border: 2px solid #00ff00;
-        box-shadow: 0 6px 10px rgb(0, 255, 0);
-        background-color: black;
-        grid-area: content;
-    }
-
-    .socials {
-        background: rgba(0, 0, 0, 0);
-        border-radius: 12px;
-        padding: 28px;
-        border: 2px solid #00ff00;
-        box-shadow: 0 6px 10px rgb(0, 255, 0);
-        background-color: black;
-        grid-area: socials;
-    }
-    .friends {
-        background: rgba(0, 0, 0, 0);
-        border-radius: 12px;
-        padding: 28px;
-        border: 2px solid #00ff00;
-        box-shadow: 0 6px 10px rgb(0, 255, 0);
-        background-color: black;
-        grid-area: friends;
-    }
-
-    .avatar {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        display: block;
-        margin-bottom: 16px;
-    }
-
-    .name {
-        margin: 10px;
-        font-size: 28px;
-    }
-
-    .tagline {
-        margin-top: 6;
-        color: rgb(0, 255, 0);
-        margin-bottom: 18;
-    }
-
-    .sectionTitle {
-        margin-top: 18;
-        margin-bottom: 8;
-        font-size: 16;
-    }
-
-    .text {
-        color: #00ff00;
-        line-height: 1.6;
-    }
-
-    .list {
-        padding-left: 0;
-        color: #00ff00;
-        list-style-type: none;
-    }
+ 
