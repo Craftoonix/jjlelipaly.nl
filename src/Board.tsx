@@ -8,14 +8,21 @@ function Message(){
         <main className={"container"}>
             <div className={"title"}>
                 <nav>
-                    <Link to ="/"><span className={"rainbow-text-animated"}>Joshua's Webpage</span></Link>
+                    <Link to ="/" style={{textDecoration:"none"}}>
+                        <span className={"rainbow-text-animated"}>
+                            Joshua's Webpage
+                        </span>
+                    </Link>
                 </nav>
-                
             </div>  
-            <Routes>
-                <Route path="/" element={<Home/>}/> 
-                <Route path="/projects" element={<Projects/>}/>
-            </Routes>
+
+            <div className={"table"}>
+                <Routes>
+                    <Route path="/" element={<Home/>}/> 
+                    <Route path="/projects" element={<Projects/>}/>
+                </Routes>               
+            </div>
+
             
         </main>    
         </>

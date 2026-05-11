@@ -19,7 +19,7 @@ function Rain() {
         ctx.scale(DPR, DPR);
 
         // get card element
-        const cardEl = document.querySelector(".board") as HTMLElement | null;
+        const cardEl = document.querySelector(".table") as HTMLElement | null;
         function getCardRect() {
             if (!cardEl) return null;
             const r = cardEl.getBoundingClientRect();
@@ -85,10 +85,10 @@ function Rain() {
             const dt = now - last;
             last = now;
 
-            // Clear with slight opacity for motion blur effect
+            // motion blur
             if (!ctx) return;
             ctx.clearRect(0, 0, width, height);
-            ctx.fillStyle = "rgba(10,12,15,0.12)"; // subtle dark overlay; tweak as needed
+            ctx.fillStyle = "rgba(10,12,15,0.12)"; // dark overlay
             ctx.fillRect(0, 0, width, height);
 
             ctx.lineWidth = 1;
@@ -108,7 +108,7 @@ function Rain() {
                     d.alpha = rand(0.2, 0.6);
                 }
 
-                // respawn when off bottom
+                // TODO: respawn when off bottom
                 if (d.y > height + d.len) {
                     d.y = -20;
                     d.x = Math.random() * width;
@@ -118,13 +118,11 @@ function Rain() {
                     d.alpha = rand(0.2, 0.6);
                 }
 
-                // If the drop's tip is inside the card rect, skip drawing it (disappear on collision)
+                // drop disappears after contact
                 const tipX = d.x + d.wind * 8;
                 const tipY = d.y + d.len;
                 if (isInCard(tipX, tipY)) {
-                    // Optionally create a tiny splash just outside the card edge:
-                    // if the tip is just inside top/bottom/left/right edges, draw a small line at the border instead.
-                    // For simplicity, just respawn the drop above the screen so it disappears immediately:
+                    //TODO tiny splash
                     d.y = -Math.random() * 200;
                     d.x = Math.random() * width;
                     continue;
@@ -136,7 +134,7 @@ function Rain() {
                 ctx.lineTo(d.x + d.wind * 8, d.y + d.len);
                 ctx.stroke();
 
-                // small splash when reaching bottom
+                // TODO: small splash when reaching bottom
                 if (d.y >= height - 2) {
                     ctx.beginPath();
                     ctx.strokeStyle = `rgba(200,220,255,${d.alpha * 0.5})`;

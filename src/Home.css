@@ -1,6 +1,6 @@
 .board {
-    max-width: 45em;
-    min-height: 40em;
+    width: inherit;
+    min-height: inherit;
     display: grid;
     justify-content: center;
     grid-template-areas:
