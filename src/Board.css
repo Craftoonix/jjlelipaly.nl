@@ -10,18 +10,13 @@
     gap: 1em;
 }
 
-
-.board {
-    max-width: 45em;
-    min-height: 40em;
-    display: grid;
-    justify-content: center;
-    grid-template-areas:
-    "content stars"
-    "content friends";
-    grid-template-columns: 3fr 1fr;
-    gap: 1em;
-    grid-area: board;
+.td {
+    background: rgba(0, 0, 0, 0);
+    border-radius: 12px;
+    padding: 28px;
+    border: 2px solid #00ff00;
+    box-shadow: 0 6px 10px rgb(0, 255, 0);
+    background-color: black;
 }
 
 .rainbow-text-animated {    
@@ -39,7 +34,7 @@
     color: transparent;
     background-size: 400% 100%;
     animation: rainbow-animation 4s linear infinite;
-    width: 10em;
+    width: 1em;
 }
 
 a {

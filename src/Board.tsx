@@ -1,10 +1,10 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import "./Board.css"
 import Home from "./Home"
-import AboutMe from "./AboutMe"
+import Projects from "./Projects"
 
 function Message(){
-    return (
+    return (<>
         <main className={"container"}>
             <div className={"title"}>
                 <nav>
@@ -12,14 +12,14 @@ function Message(){
                 </nav>
                 
             </div>  
-            <div className={"board"}>
-           
-                <Routes>
-                    <Route path="/" element={<Home/>}/> 
-                    <Route path="/projects" element={<AboutMe/>}/>
-                </Routes>
-            </div>
-        </main>
+            <Routes>
+                <Route path="/" element={<Home/>}/> 
+                <Route path="/projects" element={<Projects/>}/>
+            </Routes>
+            
+        </main>    
+        </>
+
     );
 
     
