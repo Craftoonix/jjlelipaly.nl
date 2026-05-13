@@ -4,9 +4,16 @@ import "./Projects.css"
 function Projects () {
     return(
         <div className={"td"}>
-            <h1 style={{fontSize:"2.5em",textAlign:"left", marginTop:"0.1em"}}>
-                Projects
-            </h1>
+            <div className={"head"}>
+                <div>
+                    <nav><Link to="/" className={"back"}></Link></nav>
+                </div>
+
+                <h2 className={"header"} style={{fontSize:"2.5em", margin:"0em 0em 0.5em 0em"}}>
+                    Projects
+                </h2>
+            </div>
+
 
             <h2 style={{textAlign:"left"}}>
                 Solving and Generating Numberlink puzzles
