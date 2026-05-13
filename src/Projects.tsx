@@ -21,7 +21,7 @@ function Projects () {
             <p style={{textAlign:"left"}}>
                 This program was part of 
                 my <Link to="https://theses.liacs.nl/pdf/2025-2026-LelipalyJJoshua.pdf" 
-                target="_blank" rel="noreferrer"> bachelor thesis project </Link>. It is capable
+                target="_blank" rel="noreferrer">bachelor thesis project</Link>. It is capable
                 of solving and generating any solvable Numberlink puzzle by encoding it to a SAT problem and 
                 feeding this encoding to <Link to="http://minisat.se/">Minisat</Link>. 
                 The project can be found <Link target="_blank" rel="noreferrer" 
