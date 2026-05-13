@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
-import "./Home.css"
+import "./Home.css";
+import getFavicon  from "./helpers/Favicon";
 
 function Home() {
+    const marcsite = getFavicon('https://marchoek.nl', 32);
     return(<main className={"board"}>
         <div className="td" style={{gridArea:"content"}}>
             <img
@@ -41,19 +43,30 @@ function Home() {
  
             </nav> 
         </div>
-        <div className={"td"} style={{gridArea:"friends", padding:"2em"}}
-        >
+        <div className={"td"} style={{gridArea:"friends", padding:"1.5em"}}>
             <h2>Friends</h2>
-            <ul className={"list"}>
-                <li className={"li"}><a href="https://marchoek.nl" target="_blank" rel="noreferrer">Marc Hoek</a></li>
-            </ul>            
-            <h2>Socials</h2>
-            <ul className={"list"}>
-                <li className={"li"}><a href="https://github.com/Craftoonix" target="_blank" rel="noreferrer">GitHub</a></li>
-                <li className={"li"}><a href="https://x.com/Craftoonix" target="_blank" rel="noreferrer">Twitter</a></li>
-                <li className={"li"}><a href="https://www.linkedin.com/in/joshua-jordan-lelipaly-928ba4302" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <div className={"nostar"} style={{backgroundImage:`url("${marcsite}")`}}>
+                <a href="https://marchoek.nl" target="_blank" rel="noreferrer">
+                    Marc Hoek
+                </a>
+            </div>    
+            <h2 style={{paddingTop:"1em"}}>Socials</h2>
+            <div className={"nostar"} style={{backgroundImage:"url('src/assets/github.jpg')"}}>
+                <a href="https://github.com/Craftoonix" target="_blank" rel="noreferrer">
+                    GitHub
+                </a>    
+            </div>
+            <div className={"nostar"} style={{backgroundImage:"url('src/assets/twitter.png')"}}>
+                <a href="https://x.com/Craftoonix" target="_blank" rel="noreferrer">
+                    Twitter
+                </a>
+            </div>
+            <div className={"nostar"} style={{backgroundImage:"url('src/assets/linkedin.png')"}}>
+                <a href="https://www.linkedin.com/in/joshua-jordan-lelipaly-928ba4302" target="_blank" rel="noreferrer">
+                    LinkedIn
+                </a>
+            </div>
 
-            </ul>
         </div>
     </main>);
 }
