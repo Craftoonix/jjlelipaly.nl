@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import "./Special.css";
 
-import theSpecialVideo from "/src/assets/rickroll.mov"
+import theSpecialVideo from "/src/assets/special.mp4"
 
 function Special () {
     const videoRef = useRef<HTMLVideoElement>(null);
