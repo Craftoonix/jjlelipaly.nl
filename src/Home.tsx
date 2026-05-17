@@ -38,7 +38,8 @@ function Home() {
             <nav>
                 <ul className={"list"}>
                     <li className={"li"}><Link to="/projects">Projects</Link></li>
-                    <li className={"li"}><Link to="/resume">Resume</Link></li>                     
+                    <li className={"li"}><Link to="/resume">Resume</Link></li>    
+                    <li className={"li"}><Link to="/special">Special</Link></li>    
                 </ul>
  
             </nav> 

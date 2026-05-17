@@ -2,6 +2,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import "./Board.css"
 import Home from "./Home"
 import Projects from "./Projects"
+import Special from './Special';
 
 function Message(){
     return (<>
@@ -20,6 +21,7 @@ function Message(){
                 <Routes>
                     <Route path="/" element={<Home/>}/> 
                     <Route path="/projects" element={<Projects/>}/>
+                    <Route path="/special" element={<Special/>}/>
                 </Routes>               
             </div>
 
