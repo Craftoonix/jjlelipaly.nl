@@ -1,0 +1,7 @@
+jjlelipaly.nl, www.jjlelipaly.nl {
+    root * /srv
+    file_server
+
+    try_files {path} /index.html
+
+}

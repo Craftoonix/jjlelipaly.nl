@@ -1,5 +1,5 @@
 
-function getFavicon(href, size = 16) {  
+function getFavicon(href:string, size = 16) {  
     const domain = new URL(href).hostname;  
     return `https://www.google.com/s2/favicons?domain=${domain}&sz=${size}`;
 }
