@@ -12,7 +12,7 @@
 
 .table {
     min-height: 40em;
-    width: 45em;
+    max-width: 45em;
     display: flex;
 }
 
