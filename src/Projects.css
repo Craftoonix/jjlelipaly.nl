@@ -6,7 +6,7 @@
 }
 
 .back {
-    background-image: url('src/assets/arrow.gif');
+    background-image: url('../src/assets/arrow.gif');
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;

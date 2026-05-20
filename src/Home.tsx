@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import "./Home.css";
-import getFavicon  from "./helpers/Favicon";
+import getFavicon from "./helpers/Favicon";
+import GitHubLogo from "./assets/github.jpg";
+import LinkedInLogo from "./assets/linkedin.png";
+import TwitterLogo from "./assets/twitter.png";
 
 function Home() {
     const marcsite = getFavicon('https://marchoek.nl', 32);
@@ -31,17 +34,14 @@ function Home() {
                 Email: <a href="mailto:j.j.lelipaly@gmail.com">j.j.lelipaly@gmail.com</a>
             </p>
         </div>
-        <div className={"td"} style={{gridArea:"stars", padding:"2em"}}>
-            <h2>
-                Stars
-            </h2>
+        <div className={"td"} style={{gridArea:"stars", padding:"1.5em"}}>
+            <h2>Stars</h2>
             <nav>
                 <ul className={"list"}>
                     <li className={"li"}><Link to="/projects">Projects</Link></li>
                     <li className={"li"}><Link to="/resume">Resume</Link></li>    
                     <li className={"li"}><Link to="/special" style={{textDecoration:"none"}}><span className={"rainbow-text-animated"}>Special</span></Link></li>    
                 </ul>
- 
             </nav> 
         </div>
         <div className={"td"} style={{gridArea:"friends", padding:"1.5em"}}>
@@ -52,17 +52,17 @@ function Home() {
                 </a>
             </div>    
             <h2 style={{paddingTop:"1em"}}>Socials</h2>
-            <div className={"nostar"} style={{backgroundImage:"url('src/assets/github.jpg')"}}>
+            <div className={"nostar"} style={{backgroundImage:`url("${GitHubLogo}")`}}>
                 <a href="https://github.com/Craftoonix" target="_blank" rel="noreferrer">
                     GitHub
                 </a>    
             </div>
-            <div className={"nostar"} style={{backgroundImage:"url('src/assets/twitter.png')"}}>
+            <div className={"nostar"} style={{backgroundImage:`url("${TwitterLogo}")`}}>
                 <a href="https://x.com/Craftoonix" target="_blank" rel="noreferrer">
                     Twitter
                 </a>
             </div>
-            <div className={"nostar"} style={{backgroundImage:"url('src/assets/linkedin.png')"}}>
+            <div className={"nostar"} style={{backgroundImage:`url("${LinkedInLogo}")`}}>
                 <a href="https://www.linkedin.com/in/joshua-jordan-lelipaly-928ba4302" target="_blank" rel="noreferrer">
                     LinkedIn
                 </a>
