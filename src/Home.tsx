@@ -39,7 +39,7 @@ function Home() {
             <nav>
                 <ul className={"list"}>
                     <li className={"li"}><Link to="/projects">Projects</Link></li>
-                    <li className={"li"}><Link to="/resume">Resume</Link></li>    
+                    <li className={"li"}><Link to="https://jjlelipaly.nl/assets/resume-DOFAUw-8.pdf" target="_blank" rel="noreferrer">Resume</Link></li>    
                     <li className={"li"}><Link to="/special" style={{textDecoration:"none"}}><span className={"rainbow-text-animated"}>Special</span></Link></li>    
                 </ul>
             </nav> 
