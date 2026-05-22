@@ -1,0 +1,21 @@
+services:
+  website:
+    build: .
+    image: craftoonix/resume-web-app
+    container_name: jjlelipaly
+    expose:
+      - 80
+    networks:
+      - caddy_net
+    restart: unless-stopped
+    volumes:
+      - data:/data
+      - config:/config
+
+volumes:
+  data: 
+  config:
+
+networks:
+  caddy_net:
+    external: true
