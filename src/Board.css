@@ -21,8 +21,17 @@
     border-radius: 12px;
     padding: 28px;
     border: 2px solid #00ff00;
-    box-shadow: 0 6px 10px rgb(0, 255, 0);
+    /* box-shadow: 0 6px 10px rgb(0, 255, 0); */
     background-color: black;
+    animation: td-animation 4s linear infinite;
+}
+
+@keyframes td-animation {
+    0%   { box-shadow: 0 9px 15px rgb(0, 255, 0); }
+    30%  { box-shadow: 0 6px 10px rgb(0, 255, 0); }
+    50%  { box-shadow: 0 0px 0px  rgb(0, 255, 0); }
+    70%  { box-shadow: 0 6px 10px rgb(0, 255, 0); }
+    100% { box-shadow: 0 9px 15px rgb(0, 255, 0); }
 }
 
 .rainbow-text-animated {    
@@ -39,7 +48,7 @@
     background-clip: text;
     color: transparent;
     background-size: 400% 100%;
-    animation: rainbow-animation 4s linear infinite;
+    animation: rainbow-animation 5s linear infinite;
     width: 1em;
 }
 
