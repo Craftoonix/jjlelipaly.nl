@@ -47,7 +47,8 @@ function Projects () {
                 A videogame in which the player is instructed to enter a patient as a tiny doctor to combat 
                 their issue from the inside. This game has metroidvania and 2D platformer elements where the 
                 player can defeat enemies with unlockable weapons and explore through the means of 
-                parkouring. Demo: <span className='rainbow-text-animated'>COMING SOON</span>.
+                parkouring. Play the game <Link to="https://game.jjlelipaly.nl" target="_blank" rel="noreferrer">
+                here</Link>
 
             </p>
         </div>

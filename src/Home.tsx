@@ -40,6 +40,7 @@ function Home() {
                 <ul className={"list"}>
                     <li className={"li"}><Link to="/projects">Projects</Link></li>
                     <li className={"li"}><Link to="/resume.pdf" target="_blank" rel="noreferrer">Resume</Link></li>    
+                    <li className={"li"}><Link to="https://game.jjlelipaly.nl" target="_blank" rel="noreferrer">Tiny Doctor</Link></li>    
                     <li className={"li"}><Link to="/special" style={{textDecoration:"none"}}><span className={"rainbow-text-animated"}>Special</span></Link></li>    
                 </ul>
             </nav> 
